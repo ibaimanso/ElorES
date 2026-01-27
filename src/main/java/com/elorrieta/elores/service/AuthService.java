@@ -42,7 +42,6 @@ public class AuthService {
         // Conectar al servidor si no está conectado
         if (!socketClient.isConnected()) {
             socketClient.connect();
-            // Leer mensaje de bienvenida del servidor UNA SOLA VEZ
             try {
                 socketClient.readWelcomeMessage();
             } catch (Exception e) {

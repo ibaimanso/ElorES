@@ -35,7 +35,9 @@ public class NavigationController {
             mainFrame.getContentPane().removeAll();
             mainFrame.getContentPane().add(panel);
             mainFrame.revalidate();
+            mainFrame.setResizable(false);
             mainFrame.repaint();
+            mainFrame.setSize(600, 600);
         }
     }
     

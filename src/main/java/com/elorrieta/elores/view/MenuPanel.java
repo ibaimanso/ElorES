@@ -97,10 +97,9 @@ public class MenuPanel extends JPanel {
         btnPerfil = createMenuButton("👤 Mi Perfil");
         btnPerfil.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(MenuPanel.this, 
-                    "Funcionalidad de Perfil en desarrollo", 
-                    "Información", 
-                    JOptionPane.INFORMATION_MESSAGE);
+                // Navegar al panel de perfil
+                PerfilPanel perfilPanel = new PerfilPanel();
+                navigationController.navigateTo(perfilPanel);
             }
         });
         panelButtons.add(btnPerfil);
