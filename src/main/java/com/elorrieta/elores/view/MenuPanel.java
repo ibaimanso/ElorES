@@ -85,10 +85,9 @@ public class MenuPanel extends JPanel {
         btnAlumnos = createMenuButton("👥 Gestión de Alumnos");
         btnAlumnos.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(MenuPanel.this, 
-                    "Funcionalidad de Alumnos en desarrollo", 
-                    "Información", 
-                    JOptionPane.INFORMATION_MESSAGE);
+                // Navegar al panel de alumnos
+                AlumnosPanel alumnosPanel = new AlumnosPanel();
+                navigationController.navigateTo(alumnosPanel);
             }
         });
         panelButtons.add(btnAlumnos);
