@@ -61,10 +61,9 @@ public class MenuPanel extends JPanel {
         btnHorario = createMenuButton("📅 Mi Horario");
         btnHorario.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(MenuPanel.this, 
-                    "Funcionalidad de Horario en desarrollo", 
-                    "Información", 
-                    JOptionPane.INFORMATION_MESSAGE);
+                // Navegar al panel de horario
+                HorarioPanel horarioPanel = new HorarioPanel();
+                navigationController.navigateTo(horarioPanel);
             }
         });
         panelButtons.add(btnHorario);

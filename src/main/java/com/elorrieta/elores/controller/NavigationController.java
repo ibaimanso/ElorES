@@ -37,7 +37,7 @@ public class NavigationController {
             mainFrame.revalidate();
             mainFrame.setResizable(false);
             mainFrame.repaint();
-            mainFrame.setSize(600, 600);
+            mainFrame.setSize(800, 600);
         }
     }
     

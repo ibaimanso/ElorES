@@ -13,6 +13,7 @@ public enum CommandType {
     UPDATE_REUNION,
     DELETE_REUNION,
     GET_ALUMNOS,
+    GET_PROFESORES,
     GET_PERFIL,
     UPDATE_PERFIL,
     PING,
