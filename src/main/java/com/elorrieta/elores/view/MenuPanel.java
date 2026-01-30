@@ -72,10 +72,9 @@ public class MenuPanel extends JPanel {
         btnReuniones = createMenuButton("📋 Reuniones");
         btnReuniones.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(MenuPanel.this, 
-                    "Funcionalidad de Reuniones en desarrollo", 
-                    "Información", 
-                    JOptionPane.INFORMATION_MESSAGE);
+                // Navegar al panel de reuniones
+                ReunionesPanel reunionesPanel = new ReunionesPanel();
+                navigationController.navigateTo(reunionesPanel);
             }
         });
         panelButtons.add(btnReuniones);

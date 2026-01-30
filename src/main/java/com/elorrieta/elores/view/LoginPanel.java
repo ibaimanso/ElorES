@@ -16,6 +16,7 @@ import javax.swing.border.EmptyBorder;
 import com.elorrieta.elores.controller.NavigationController;
 import com.elorrieta.elores.model.Usuario;
 import com.elorrieta.elores.service.AuthService;
+import javax.swing.ImageIcon;
 
 /**
  * Panel de login con autenticación segura
@@ -24,7 +25,6 @@ public class LoginPanel extends JPanel {
     private JTextField txtEmail;
     private JPasswordField txtPassword;
     private JButton btnLogin;
-    private JLabel lblTitle;
     private JLabel lblEmail;
     private JLabel lblPassword;
     private JLabel lblStatus;
@@ -42,14 +42,6 @@ public class LoginPanel extends JPanel {
         setLayout(null);
         setBorder(new EmptyBorder(20, 20, 20, 20));
         setBackground(new Color(245, 245, 245));
-        
-        // Título
-        lblTitle = new JLabel("Framework Educativo Elorrieta");
-        lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
-        lblTitle.setFont(new Font("Segoe UI", Font.BOLD, 24));
-        lblTitle.setForeground(new Color(41, 128, 185));
-        lblTitle.setBounds(100, 50, 400, 40);
-        add(lblTitle);
         
         // Label email
         lblEmail = new JLabel("Email:");
@@ -97,6 +89,11 @@ public class LoginPanel extends JPanel {
         lblStatus.setForeground(Color.RED);
         lblStatus.setBounds(100, 350, 400, 25);
         add(lblStatus);
+        
+        JLabel logoElorrieta = new JLabel("");
+        logoElorrieta.setIcon(new ImageIcon("/../resources/logoElorrieta.png"));
+        logoElorrieta.setBounds(146, 15, 338, 104);
+        add(logoElorrieta);
         
         // Enter en password ejecuta login
         txtPassword.addActionListener(new ActionListener() {
